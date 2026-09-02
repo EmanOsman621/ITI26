@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form 2</title>
+    <style>
+      form {
+        width: 600px;
+        margin: 20px auto;
+      }
+      fieldset {
+        margin-bottom: 20px;
+      }
+      .group {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+      .group label {
+        width: 180px;
+        font-size: 14px;
+      }
+      input[type="text"],
+      select,
+      textarea {
+        flex-grow: 1;
+        padding: 4px 6px;
+        border: 1px solid #777;
+        border-radius: 2px;
+        font-size: 14px;
+        outline: none;
+      }
+      textarea {
+        height: 50px;
+        resize: vertical;
+      }
+      select[multiple] {
+        height: 85px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" autocomplete="on">
+      <!-- Your Address -->
+      <fieldset>
+        <legend>Your address</legend>
+        <div class="group">
+          <label for="fname"> First Name:</label>
+          <input type="text" id="fname" />
+        </div>
+
+        <div class="group">
+          <label for="lname"> Last Name:</label>
+          <input type="text" id="lname" />
+        </div>
+
+        <div class="group">
+          <label for="street"> Street:</label>
+          <input type="text" id="street" />
+        </div>
+        <div class="group">
+          <label for="city"> City:</label>
+          <input type="text" id="city" />
+        </div>
+      </fieldset>
+
+      <!-- Additional details -->
+      <fieldset>
+        <legend>Additional details</legend>
+        <div class="group">
+          <label for="bio">Biography</label>
+          <textarea id="bio"></textarea>
+        </div>
+
+        <div class="group">
+          <label for="image">Image</label>
+          <input type="file" id="image" accept="image/*" />
+        </div>
+
+        <div class="group">
+          <label for="age">Age Group</label>
+          <select id="age">
+            <option value="child">0 to 9 years</option>
+            <option value="teen">10 to 15</option>
+            <option value="adult">16 to 20</option>
+            <option value="senior">Senior</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <!-- interests -->
+      <fieldset>
+        <legend>Interests</legend>
+
+        <div class="group">
+          <label for="hob">Hobbies</label>
+          <select id="hob" name="hob" multiple>
+            <option>Playing soccer</option>
+            <option>Dancing</option>
+            <option>Gardening</option>
+            <option>Watching movies</option>
+          </select>
+        </div>
+
+        <div class="group">
+          <label for="fov">Favorite Car?</label>
+          <select id="fov">
+            <option value="bmw">BMW</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+            <option value="toyota">Toyota</option>
+          </select>
+        </div>
+
+        <div class="group">
+          <label for="transport">Favorite Public transport</label>
+          <select id="transport" multiple>
+            <optgroup label="Ground">
+              <option>Train</option>
+              <option>Bus</option>
+            </optgroup>
+            <optgroup label="Water"></optgroup>
+          </select>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table 1</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      h1 {
+        margin-top: 0;
+        background-color: blue;
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+      table,
+      tbody,
+      tr,
+      td {
+        padding: 10px;
+      }
+      table {
+        width: calc(100% - 20px);
+        margin: 10px;
+        border-spacing: 0 10px;
+      }
+      td {
+        border: none;
+      }
+      tr {
+        outline: 1px solid #999;
+        border-radius: 5px;
+      }
+      mark {
+        background-color: greenyellow;
+        padding: 2px 5px;
+      }
+      input {
+        margin: 10px;
+        padding: auto 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Task Scheduler</h1>
+    <form action="" autocomplete="on">
+      <input type="text" placeholder="Enter task..." />
+
+      <select>
+        <option value="Top Priority" name="Top Priority">Top Priority</option>
+        <option value="edu" name="edu">Education</option>
+        <option value="read" name="read">Read</option>
+      </select>
+
+      <input type="date" value="date" name="date" />
+
+      <input
+        type="button"
+        value="Add Task"
+        name="done"
+        style="margin-left: 0"
+      />
+    </form>
+
+    <table border="1">
+      <tbody>
+        <tr>
+          <td>DSA Practice</td>
+          <td>Priority:top</td>
+          <td>Deadline: 2023-08-24</td>
+          <td><mark>Mark Done</mark></td>
+        </tr>
+
+        <tr>
+          <td>Js Practice</td>
+          <td>Priority:top</td>
+          <td>Deadline: 2023-09-01</td>
+          <td><mark>Mark Done</mark></td>
+        </tr>
+
+        <tr>
+          <td>Maths Practice</td>
+          <td>Priority:top</td>
+          <td>Deadline: 2023-08-31</td>
+          <td><mark>Mark Done</mark></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

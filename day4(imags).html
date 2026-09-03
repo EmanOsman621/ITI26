@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image</title>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      :root {
+        --main-color: orangered;
+        --sec-color: rgb(30, 147, 30);
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        border-top: 3px solid var(--main-color);
+        border-bottom: 2px solid gray;
+        margin-bottom: 30px;
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 0;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: black;
+      }
+      .page-wrapper {
+        display: flex;
+        justify-content: space-around;
+        gap: 30px;
+        margin: 0 auto;
+        padding: 0 20px;
+        max-width: 1100px;
+      }
+      .left-sidebar {
+        flex: 0.8;
+        border-left: none;
+      }
+      .logo-box {
+        position: relative;
+        background-color: #e9e9c6;
+        border: 1px solid #ddd;
+        padding: 20px 10px;
+        text-align: center;
+        width: 70px;
+        height: 100px;
+      }
+      .issue-number { 
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: black;
+        color: white;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .logo-text {
+        margin-top: 15px;
+        font-family: serif;
+      }
+
+      .letter-a {
+        font-size: 50px;
+        font-weight: bold;
+        display: block;
+        line-height: 1;
+      }
+
+      .list-apart {
+        font-size: 11px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        display: block;
+        margin-top: 5px;
+      }
+      .main-container {
+        display: flex;
+        /* justify-content: center; */
+        text-align: center;
+        flex-direction: column;
+        flex: 3;
+      }
+      .main-container main p:first-child {
+        color: gray;
+        border-bottom: 2px dashed black;
+        padding-bottom: 10px;
+        margin-top: 0;
+      }
+      .main-container main h3 {
+        color: var(--main-color);
+      }
+      main p span {
+        color: var(--sec-color);
+      }
+      main div {
+        background-color: #d8e4d8;
+        border-top: 2px dashed;
+        border-bottom: 2px dashed;
+        padding: 10px;
+      }
+      span,
+      span a,
+      section a {
+        color: var(--sec-color);
+      }
+      main img,
+      section {
+        margin: 10px;
+      }
+      section,
+      article p {
+        text-align: left;
+      }
+
+      /* aside */
+      aside {
+        flex: 1;
+        border-left: 2px solid gray;
+        padding: 10px;
+      }
+      .links {
+        border-top: 2px dashed gray;
+        border-bottom: 2px dashed gray;
+      }
+      aside .links h4,
+      .snap h4 {
+        margin-top: 15px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      aside .links ul {
+        padding-left: 20px;
+      }
+      aside .links ul a {
+        text-decoration: none;
+        color: var(--sec-color);
+      }
+
+      /* snap */
+      .snap,
+      .job,
+      .book {
+        border-bottom: 2px dashed gray;
+      }
+
+      /* job */
+      .job p:first-child {
+        text-align: center;
+        color: gray;
+        border-bottom: 2px dashed gray;
+        padding-bottom: 15px;
+      }
+      .job h4 {
+        text-align: center;
+      }
+      .job a {
+        color: var(--sec-color);
+      }
+
+      /* book */
+      .book {
+        padding-bottom: 20px;
+      }
+      .book h4 {
+        text-align: center;
+      }
+      .book a {
+        color: var(--sec-color);
+      }
+
+      /* footer */
+      footer {
+        text-align: center;
+      }
+      footer p {
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">ARTICLE</a></li>
+        <li><a href="#">TOPICS</a></li>
+        <li><a href="#">ARTICLE</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">CONTACT</a></li>
+        <li><a href="#">CONTRIBUTE</a></li>
+        <li><a href="#">FEED</a></li>
+      </ul>
+    </nav>
+
+    <div class="page-wrapper">
+      <!-- logo -->
+      <aside class="left-sidebar">
+        <div class="logo-box">
+          <span class="issue-number">306</span>
+          <div class="logo-text">
+            <span class="letter-a">A</span>
+            <span class="list-apart">LIST<br />apart</span>
+          </div>
+        </div>
+      </aside>
+      <!-- Main container -->
+      <div class="main-container">
+        <main>
+          <p>May 25, 2020</p>
+          <h3>Responsive Web Design</h3>
+          <p>by <span>ETHAN MARCOTTE</span></p>
+
+          <div>
+            Published:
+            <span>Css, Html, User interface Design | &copy; Eman</span>
+          </div>
+
+          <img src="./image/Screenshot 2026-08-31 142027.jpg" />
+        </main>
+
+        <article>
+          <p>
+            <i
+              class="fa-solid fa-quote-left"
+              style="color: var(--main-color); font-size: 25px"
+            ></i>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus
+            quibusdam animi sed nihil. Iste in consequuntur error,
+            necessitatibus placeat quam deleniti optio. Corrupti vel saepe
+            veniam rem consequatur odit quis."
+          </p>
+          <p>
+            John <span><a href="#">"A Day With ksd"</a></span>
+          </p>
+        </article>
+
+        <section>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          laudantium nisi tenetur ut illum expedita doloremque aperiam eius
+          architecto eligendi, non laborum ea aut maxime deleniti quas. Minima,
+          esse corporis?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Distinctio laudantium nisi tenetur ut illum expedita doloremque
+          aperiam eius architecto eligendi, non laborum ea aut maxime deleniti
+          quas. Minima, esse corporis?Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Distinctio laudantium nisi tenetur ut illum expedita
+          doloremque aperiam eius architecto eligendi, non laborum ea aut maxime
+          deleniti quas. Minima, esse corporis?tenetur ut illum expedita doloremque aperiam eius
+          architecto eligendi, non laborum ea aut maxime deleniti quas. Minima,
+          esse corporis?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Distinctio laudantium nisi tenetur ut illum expedita doloremque
+          aperiam eius architecto eligendi, non lab
+        </section>
+
+        <section>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam
+          facere, eligendi tempora similique reiciendis quia officiis a
+          consequuntur necessitatibus eius aperiam nobis, accusamus quo adipisci
+          mollitia beatae eum sapiente sit!tenetur ut illum expedita doloremque aperiam eius
+          architecto eligendi, non laborum ea aut maxime deleniti quas. Minima,
+          esse corporis?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Distinctio laudantium nisi tenetur ut illum expedita doloremque
+          aperiam eius architecto eligendi, non lab.
+        </section>
+
+        <section>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          laudantium nisi tenetur ut illum expedita doloremque aperiam eius
+          architecto eligendi tenetur ut illum expedita doloremque aperiam eius
+          architecto eligendi, non laborum ea aut maxime deleniti quas. Minima,
+          esse corporis?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Distinctio laudantium nisi tenetur ut illum expedita doloremque
+          aperiam eius architecto eligendi, non lab, non laborum ea aut maxime deleniti quas. Minima,
+          esse corporis?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Distinctio laudantium nisi tenetur<a href="#">utillum</a> to
+          <a href="#">expedita</a> doloremque aperiam eius architecto eligendi,
+          non laborum ea aut maxime deleniti quas. Minima, esse corporis?Lorem
+          ipsum dolor sit amet <a href="#">consectetur</a> adipisicing elit.
+          Distinctio laudantium nisi tenetur ut illum expedita doloremque
+          aperiam eius architecto eligendi, non laborum ea aut maxime deleniti
+          quas. Minima, esse corporis?
+        </section>
+
+        <section>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          laudantium nisi tenetur ut illum expedita doloremque aperiam eius
+          architecto eligendi, non laborum ea aut maxime deleniti quas. Minima,
+          esse corporis?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Distinctio laudantium nisi tenetur ut illum expedita doloremque
+          aperiam eius architecto eligendi,<a href="#">non laborum ea</a> aut
+          maxime deleniti quas. Minima, esse corporis?Lorem ipsum dolor sit amet
+          consectetur adipisicing tenetur ut illum expedita doloremque aperiam eius
+          architecto eligendi, non laborum ea aut maxime deleniti quas. Minima,
+          esse corporis?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Distinctio laudantium nisi tenetur ut illum expedita doloremque
+          aperiam eius architecto eligendi, non lab elit. Distinctio laudantium nisi tenetur ut
+          illum expedita doloremque aperiam eius architecto eligendi, non
+          laborum ea aut maxime deleniti quas. Minima, esse corporis?
+        </section>
+      </div>
+
+      <!-- aside -->
+      <aside>
+        <!-- search -->
+        <search>
+          <label for="search" style="display: block">Search ALA</label>
+          <input type="search" id="search" />
+          <input type="button" value="GO" /><br />
+          <input type="checkbox" />
+          <label>include</label>
+        </search>
+        <br />
+
+        <!-- nav -->
+        <div class="links">
+          <h4>Topics</h4>
+          <ul>
+            <li><a href="#">Code</a></li>
+            <li><a href="#">Content</a></li>
+            <li><a href="#">Culture</a></li>
+            <li><a href="#">Degree</a></li>
+            <li><a href="#">Program</a></li>
+            <li><a href="#">Program</a></li>
+          </ul>
+        </div>
+
+        <!-- snapshot -->
+        <div class="snap">
+          <h4>Snapshot</h4>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
+            exercitationem possimus excepturi atque quidem ea tempore fuga?
+          </p>
+        </div>
+
+        <!-- Job -->
+        <div class="job">
+          <p>Ad the dark</p>
+
+          <h4>JOB BOAND</h4>
+          <a href="#">crision fdljs + kjdck is jkdfsh for andsk dksj</a>
+
+          <p>more the <a href="#">Job jdks</a></p>
+        </div>
+
+        <!-- Book -->
+        <div class="book">
+          <h4>A Book Apart</h4>
+          <img
+            src="./image/lulu-products-product-types-print-books-2x.webp"
+            alt="image book"
+            style="width: 200px"
+          />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A ut minus
+            obcaecati fugit culpa aliquid exercitationem! Nemo harum similique
+            quis.
+          </p>
+          <a href="#">Create book section</a>
+        </div>
+
+        <!-- footer -->
+        <footer>
+          <p>HOSTED BY</p>
+          <div style="font: bold 35px normal">(mt)</div>
+          <p>PUDLIMED BY</p>
+          <h4 style="font: bold 20px normal">
+            <i class="fa-solid fa-bullseye"></i> happy cog
+          </h4>
+        </footer>
+      </aside>
+    </div>
+  </body>
+</html>

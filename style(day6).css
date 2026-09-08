@@ -1,0 +1,253 @@
+:root {
+  --bg-color: #2a4359;
+  --sc-bg: #dda958;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+ul {
+  list-style-type: none;
+}
+details {
+    color: var(--sc-bg);
+}
+/* start info */
+.info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 25px;
+}
+.info .about {
+    display: flex;
+    gap: 25px;
+}
+.info .about a i {
+    color: var(--sc-bg);
+    padding: 5px;
+}
+.info .about a {
+  color: black;
+}
+.info .social ul {
+  display: flex;
+  gap: 20px;
+}
+.info .social ul li i{
+    background-color: var(--sc-bg);
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+}
+/* End Info Section */
+/* Start Header */
+header {
+    background-color: var(--bg-color);
+    /* margin-bottom: 0; */
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 150px;
+}
+header  img {
+    width: 15%;
+}
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+header nav ul li:last-child a{
+color: var(--sc-bg);
+}
+header nav ul a {
+    color: white;
+}
+header .phone {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+header .phone i {
+    padding: 10px;
+    margin-top: 15px;
+}
+header .phone i,
+header .phone .number p {
+    color: var(--sc-bg);
+}
+header .phone .number {
+    color: white;
+}
+header .phone .number h4 {
+    margin-bottom: 0;
+}
+header .phone .number p{
+    margin-top: 0;
+}
+/* End Header */
+/* Start Main */
+main {
+    background: url(./image/mainphoto6.jpg) no-repeat;
+    background-size:cover;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main h2 a{
+    color: var(--sc-bg);
+}
+main h2,
+main p {
+    color: white;
+}
+/* End Main */
+/* Start Communication */
+.communcation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    margin: 50px 150px;
+}
+form {
+    flex: 1;
+}
+.contact {
+    flex: 1;
+}
+form label,
+form input[type="button"]{
+    display: block;
+}
+form input {
+    margin-bottom: 10px;
+}
+form input:not(:last-child),
+textarea {
+    padding: 2px 7px;
+    border:1px solid gray;
+    border-radius: 5px;
+    width: 85%;
+}
+form label {
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+form textarea {
+    margin-top: 2px;
+}
+form input[type = "button"] {
+    border: none;
+    border-radius: 15px 0 15px 15px;
+    margin-top: 15px;
+    background-color: var(--sc-bg);
+    color: white;
+    padding: 10px;
+}
+.communcation .contact .touch h4{
+    color: var(--sc-bg);
+    font-style: italic;
+}
+.communcation .contact  p {
+    color: gray;
+}
+.communcation .contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.communcation .contact-info .phone{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.communcation .contact-info .phone i {
+    color: var(--sc-bg);
+}
+.communcation .contact-info .phone h4{
+    margin-bottom: 0;
+}
+.communcation .contact-info .phone p {
+    margin-top: 2px;
+}
+.communcation .follow .icon ul,
+.footer .icon ul{
+    display: flex;
+    gap: 10px;
+    padding-left: 0;
+}
+.communcation .follow .icon ul li a,
+.footer .icon ul li a {
+    color: white;
+    background-color: var(--sc-bg);
+    padding: 5px;
+    border-radius: 50%;
+}
+/* End Communication */
+/* Start Location */
+iframe {
+    width: 100%;
+}
+/* End Location */
+/* Start Footer */
+.footer {
+    background-color: var(--bg-color);
+}
+.footer .footer-container {
+    margin: 0 150px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+.footer .logo img{
+    width: 80%;
+}
+.footer .links {
+    display: flex;
+    justify-content: space-around;
+}
+.footer .links .link ul li details {
+    margin: 10px;
+}
+.footer .links .link ul li a,
+.footer .info p a {
+    color: white;
+}
+.footer .links .link ul li i {
+    color: var(--sc-bg);
+}
+.footer .links .link ul li:first-child {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.footer .info {
+    display: flex;
+    flex-direction: column;
+}
+.footer .info p:first-child {
+    font-weight: bold;
+    margin-left: -35px;
+}
+.footer .info p i {
+    color: var(--sc-bg);
+    padding: 5px;
+}
+.footer .copy {
+    text-align: center;
+    color: rgb(230, 227, 227);
+    border-top: 2px solid var(--sc-bg);
+    padding: 5px;
+    margin: 0 35px;
+}
+/* End Footer */

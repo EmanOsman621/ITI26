@@ -1,0 +1,327 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+:root {
+  --main-color: #219195;
+  --bg-color: #161616;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+.container {
+  margin: 0 200px;
+  padding-top: 25px;
+}
+/* Start Nav */
+nav {
+  background-color: var(--bg-color);
+}
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 100px;
+}
+nav .links ul {
+  display: flex;
+  gap: 10px;
+}
+nav .links ul li a {
+  color: white;
+}
+nav .links ul li:first-child {
+  background-color: var(--main-color);
+  padding: 5px;
+}
+nav .logo img {
+  width: 50%;
+}
+/* End Nav */
+/* Start Main */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url(./image/KreativeMain.jpg) no-repeat;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+}
+main h1 span {
+  color: var(--main-color);
+}
+main p {
+  color: gray;
+}
+/* End Main */
+/* Start Service */
+.services {
+  background-color: var(--bg-color);
+  color: white;
+  padding: 35px;
+}
+.services .info,
+.about .info {
+  display: flex;
+  justify-content: space-between;
+}
+.services .info h3,
+.about .info h3 {
+  color: var(--main-color);
+}
+.services p,
+.about .info p {
+  color: gray;
+}
+.services .info .logo {
+  flex: 1;
+}
+.services .info .pra {
+  flex: 2;
+}
+.services .type {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 20px;
+}
+/* End Service */
+/* Start Portfolio */
+.portfolio {
+  padding: 35px 0;
+}
+.portfolio .port h3 {
+  color: var(--main-color);
+  margin-bottom: 0;
+}
+.portfolio .port p {
+  margin-top: 5px;
+  color: gray;
+}
+.portfolio .images {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.portfolio .images .image img {
+  width: 150px;
+}
+.portfolio .images .image {
+  box-shadow: 0px 4px 5px gray;
+}
+.portfolio .images .image h5 {
+  color: var(--main-color);
+  text-align: center;
+}
+/* End Portfolio */
+/* Start journal */
+.jornal {
+  background-color: var(--main-color);
+}
+.jornal h3 {
+  color: white;
+  margin-bottom: 5px;
+}
+.jornal .container .one {
+  color: #7ddfe4;
+  margin-top: 0;
+}
+.jornal p {
+  color: white;
+  font-size: 12px;
+}
+.jornal .place {
+  display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+}
+.jornal .place img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+.jornal .place .text a {
+  color: white;
+  font-weight: bold;
+}
+.jornal .place .text {
+  flex: 2;
+}
+.jornal .date p:last-child,
+.jornal .place .text p:last-child {
+  color: #7ddfe4;
+}
+/* End journal */
+/* Start About */
+.about h3 {
+  color: gray;
+}
+.about .work {
+   display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+  align-items: center;
+}
+.about .work h4 {
+  color: var(--main-color);
+}
+/* Start Meet */
+.meet .images {
+  display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+}
+.meet .images .image img {
+  width: 90%;
+}
+.meet .images .image h4 {
+  color: var(--main-color);
+}
+.meet .images .social ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 0;
+}
+.meet .images .social a i,
+.meet .images .image p {
+  color: gray;
+}
+/* End Meet */
+/* Start Test */
+.test h3 {
+  color: var(--main-color);
+  margin-bottom: 0;
+}
+.test > p {
+  color: gray;
+  margin-top: 0;
+}
+.test .images {
+  display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+}
+.test .profile {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.test .profile img {
+  width: 50px;
+  border-radius: 50%;
+}
+.test .profile h5 {
+  margin-bottom: 0;
+}
+.test .profile p {
+  color: gray;
+  margin-top: 0;
+  font-size: 12px;
+}
+/* End Test */
+/* End About */
+/* Start Host */
+.host {
+    background-color: var(--main-color);
+}
+.host .sign {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.host h2 {
+    color: white;
+    font-size: 25px;
+}
+.host .templete p {
+    color: #7ddfe4;
+}
+.host .templete p span {
+    color: white;
+}
+.host .sign button {
+    padding: 5px 10px;
+    background-color: #16afb4;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+/* End Host */
+/* Start Contact */
+.contact {
+    background-color: var(--bg-color);
+    color: white;
+}
+.contact h3 {
+    color: var(--main-color);
+    margin-bottom: 0;
+}
+.contact > p {
+    margin-top: 0;
+    color: gray;
+}
+.contact .sumbit {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+}
+.contact .information {
+    display: flex;
+    flex-direction: column;
+}
+.contact .information h4 {
+    color: var(--main-color);
+}
+.contact .information p,
+.contact .information pre{
+    color: gray;
+}
+.contact .bottom p span {
+    color: white;
+}
+.contact form input,
+.contact form textarea{
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: gray;
+}
+.contact form span {
+    color: var(--main-color);
+}
+.contact form input:last-child {
+    background-color: var(--main-color);
+    padding: 5px 10px;
+    color: white;
+    border: none;
+}
+/* End Contact */
+/* Start Footer */
+.footer {
+    background-color: black;
+    color: #666;
+}
+.footer .bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer .left p span {
+    color: var(--main-color);
+}
+.footer .right .social ul{
+    gap: 15px;
+    display: flex;
+}
+.footer .right .social ul li a {
+    color: var(--main-color);
+}
+/* End Footer */

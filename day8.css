@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 20px;
+}
+:root {
+    --main-color: #fb6355;
+}
+.main-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 35px;
+}
+aside {
+    color: gray;
+}
+aside .done{
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+}
+aside .done .box {
+    padding: 5px;
+}
+aside .prices h3 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+aside .price {
+    margin-top: 0;
+    padding-top: 0;
+}
+aside .prices .price {
+    display: flex;
+    justify-content: space-between;
+}
+aside .rank {
+    margin-bottom: 50px;
+}
+aside .rank i,
+aside .avaliable i {
+    color: var(--main-color);
+}
+aside input {
+    accent-color: #ff5722;
+}
+/* start main */
+img {
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+}
+main .cards {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+}
+main .cards .card h4 {
+    margin-bottom: 5px;
+}
+main .cards .card > p {
+    color: gray;
+    margin-top: 0;
+}
+main .cards .card p {
+    margin-bottom: 10px;
+}
+main .cards .card i {
+    color: var(--main-color);
+    margin: 3px;
+}
+main .seat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+    color: gray;
+}
+main .seat p {
+    margin-top: 0;
+}
+main .seat i {
+    color: gray;
+}
+/* End main */

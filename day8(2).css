@@ -1,0 +1,350 @@
+body {
+  background-color: #b3c2d9;
+}
+:root {
+  --bg-color: #edf6f6;
+}
+/* Start Header */
+.main-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  width: 1000px;
+  margin: 25px auto;
+}
+.main-container header {
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  border-radius: 25px;
+  box-shadow: 1px 1px 2px gray;
+}
+.main-container header img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.main-container header .sea {
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+.main-container header .sea i {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  margin-left: -25px;
+}
+.main-container header .sea input {
+  padding: 5px 10px;
+  border-radius: 25px;
+  box-shadow: 1px 0px 1px black;
+}
+.main-container header .right-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5px;
+}
+.main-container header .right-header i {
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 1px 1px 2px black;
+}
+.main-container header .right-header i:last-of-type {
+  color: red;
+}
+.main-container header .name {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 1px 1px 2px black;
+}
+/* End Header */
+/* Start main */
+main {
+  background-color: var(--bg-color);
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 1px 1px 2px gray;
+  
+}
+main .table {
+  background-color: white;
+  padding: 10px;
+  border-radius: 25px;
+  width: 70px;
+}
+main h1 {
+  font-size: 55px;
+}
+main .one span {
+  font-size: 30px;
+}
+main .one {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+main .one h5 {
+  margin-bottom: 0;
+}
+main .image img {
+  width: 300px;
+}
+main button {
+  background-color: goldenrod;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+main .follow {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+main .follow .social ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 10px;
+}
+main .follow .social ul li a,
+main .follow {
+  color: gray;
+}
+/* End main */
+/* Start Aside */
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.left-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+aside {
+  padding: 15px;
+  border-radius: 25px;
+}
+/* Start color */
+aside .color {
+  background-color: var(--bg-color);
+  padding: 3px 15px;
+  border-radius: 25px;
+  box-shadow: 1px 1px 2px gray;
+}
+aside .color h4 {
+    margin-bottom: 0;
+}
+aside .color span {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 7px;
+  border: 3px solid white;
+}
+aside .color span:first-of-type {
+  background-color: blue;
+}
+aside .color span:nth-child(3) {
+  background-color: orangered;
+}
+aside .color span:nth-child(4) {
+  background-color: green;
+}
+aside .color span:nth-child(5) {
+  background-color: red;
+}
+aside .color span:nth-child(6) {
+  background-color: aqua;
+}
+/* End color */
+/* Start Product1 */
+aside .product1,
+aside .product2  {
+    background-size: cover;
+    width: 270px;
+    border-radius: 25px;
+    box-shadow: 2px 2px 2px gray;
+}
+aside .product1 {
+    background: url(./image/N2.jpg) no-repeat;
+    height: 130px;
+}
+aside .product1 h4 {
+    padding: 15px;
+}
+/* End Product1 */
+/* Start Product2 */
+aside .product2 {
+    background: url(./image/N3.jpg) no-repeat;
+    height: 400px;
+    margin-top: 20px;
+}
+aside .product2 h4 {
+    padding-left: 15px;
+    padding-top: 15px;
+    font-size: x-large;
+    margin-bottom: 0;
+}
+aside .product2 p {
+    padding-left: 15px;
+    margin-top: 5px;
+}
+/* End Product2 */
+/* End Aside */
+/* Start Footer */
+footer {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+}
+footer .left-footer,
+footer .center-footer,
+footer .right-footer,
+footer .right-footer p  {
+  background-color: var(--bg-color);
+  box-shadow: 1px 1px 2px gray;
+  padding: 15px;
+  border-radius: 25px;
+}
+footer .left-footer {
+  flex: 1;
+}
+footer .left-footer .top-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .left-footer .top-footer h3,
+footer .center-footer .million h3 {
+  margin-bottom: 0;
+}
+footer .left-footer .top-footer p,
+footer .center-footer .million p {
+  margin-top: 2px;
+}
+footer .left-footer .top-footer i {
+  color: red;
+  background-color: var(--bg-color);
+  box-shadow: 1px 1px 2px gray;
+  border-radius: 50%;
+  padding: 5px;
+}
+footer .left-footer .image img {
+  width: 40px;
+  border-radius: 10px;
+}
+
+footer .center-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  flex: 1;
+}
+footer .center-footer .image ,
+footer .right-footer .image{
+  text-align: center;
+}
+footer .center-footer .image img,
+footer .right-footer .image img {
+  width: 35px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+footer .center-footer .image img {
+  top: 35px;
+}
+footer .center-footer .image img:not(:nth-child(2)),
+footer .right-footer .image img:not(:nth-child(2)) {
+  position: absolute;
+  z-index: 2;
+}
+footer .center-footer .image img:first-child{
+  left: calc(50% - 40px);
+}
+footer .center-footer .image img:nth-child(2) {
+  position: absolute;
+  z-index: 3;
+  right: calc(50% - 20px);
+}
+footer .center-footer .image img:last-child {
+  right: calc(50% - 40px);
+}
+footer .center-footer .million {
+  background-color: cornflowerblue;
+  color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+}
+footer .center-footer .under span:first-child{
+  display: inline-block;
+  background-color: yellow;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+footer .center-footer .under{
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  position: absolute;
+  bottom:10px;
+}
+
+footer .right-footer  {
+  position: relative;
+background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url(./image/N6.jpg) no-repeat center;
+background-size: cover; 
+  flex: 2;
+  padding-bottom: 35px;
+}
+footer .right-footer p {
+  width: fit-content;
+  font-size: smaller;
+}
+footer .right-footer p i {
+  color: red;
+}
+footer .right-footer .image {
+  position: relative;
+}
+footer .right-footer .image img {
+  bottom: -22px;
+}
+footer .right-footer .image img:nth-child(2) {
+  position: absolute;
+  z-index: 3;
+  left: 20px;
+}
+footer .right-footer .image img:first-child {
+  left: 0;
+}
+footer .right-footer .image img:last-child {
+  left: 40px;
+}
+/* End Footer */

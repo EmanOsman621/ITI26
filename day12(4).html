@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Object</title>
+  </head>
+  <body>
+    <script>
+      let input = prompt("Enter 3 values");
+      let arr = input.split(" ").map(Number);
+
+      function sum(arr) {
+        let total = 0;
+        for (let i = 0; i < arr.length; i++) {
+          total += arr[i];
+        }
+        return `Sum of the 3 value = ${total}`;
+      }
+      function multi(arr) {
+        let mult = 1;
+        for (let i = 0; i < arr.length; i++) {
+          mult *= arr[i];
+        }
+        return `Multiplication of the 3 value = ${mult}`;
+      }
+      function divi(arr) {
+        let div = 1;
+        for (let i = 0; i < arr.length; i++) {
+          div /= arr[i];
+        }
+        return `Division of the 3 value = ${div}`;
+      }
+      document.write(`<h3>${sum(arr)} </h3>`);
+      document.write(`<h3>${multi(arr)} </h3>`);
+      document.write(`<h3>${divi(arr)} </h3>`);
+    </script>
+  </body>
+</html>

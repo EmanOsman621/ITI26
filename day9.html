@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alkira - Natural Australian Skincare</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="../fontawesome-free-6.7.2-web/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background-color: #fcfbfa;
+        }
+        .top-bar {
+            background-color: #eef2ed;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+        .navbar-brand {
+            letter-spacing: 3px;
+            font-weight: 600;
+        }
+        .hero-section {
+            position: relative;
+            background: url('https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
+            min-height: 550px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .hero-content {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            max-width: 450px;
+            margin-right: 8%;
+        }
+        .btn-outline-custom {
+            border: 1px solid #333;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.75rem;
+            padding: 10px 25px;
+            border-radius: 0;
+            transition: all 0.3s;
+        }
+        .btn-outline-custom:hover {
+            background-color: #333;
+            color: #fff;
+        }
+        .feature-icon {
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+            color: #555;
+        }
+        .section-title {
+            letter-spacing: 2px;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+        }
+        .ingredient-circle {
+            width: 75px;
+            height: 75px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .bg-light-tint {
+            background-color: #f4f6f4;
+        }
+        .tracking-widest {
+            letter-spacing: 2px;
+        }
+        .range-card img {
+            height: 280px;
+            object-fit: cover;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-bar text-center py-2 text-uppercase">
+        Launch Promotion: Use the code <strong>ALKIRALAUNCH</strong> for 5% off at checkout
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fs-4" href="#">alkira</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-uppercase small px-3" href="#">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase small px-3" href="#">Discover</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase small px-3" href="#">Ingredients</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase small px-3" href="#">Where to Buy</a></li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link small text-uppercase px-2" href="#">Search</a></li>
+                    <li class="nav-item"><a class="nav-link small text-uppercase px-2" href="#">Cart (0)</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content text-center text-lg-start shadow-sm">
+            <span class="text-muted small text-uppercase tracking-widest">The Hydrating Range</span>
+            <h1 class="h3 fw-light my-3">Celebrating Australian Natives</h1>
+            <a href="#" class="btn btn-outline-custom mt-2">See Hydrating Range</a>
+        </div>
+    </section>
+
+    <!-- Sub Intro Text & Icons -->
+    <section class="py-5 text-center container">
+        <p class="text-muted text-uppercase small tracking-widest lh-lg">Natural skincare full of bioactive constituents,<br>harnessing the power of australian natives.</p>
+        
+        <div class="row mt-5 text-center">
+            <div class="col-6 col-md-2 mb-4">
+                <i class="fa-solid fa-seedling feature-icon"></i>
+                <p class="small text-uppercase mb-0 text-muted" style="font-size: 0.75rem;">Australian Made</p>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <i class="fa-solid fa-leaf feature-icon"></i>
+                <p class="small text-uppercase mb-0 text-muted" style="font-size: 0.75rem;">Natural Ingredients</p>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <i class="fa-solid fa-heart feature-icon"></i>
+                <p class="small text-uppercase mb-0 text-muted" style="font-size: 0.75rem;">Vegan Product</p>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <i class="fa-solid fa-paw feature-icon"></i>
+                <p class="small text-uppercase mb-0 text-muted" style="font-size: 0.75rem;">Cruelty Free</p>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <i class="fa-solid fa-recycle feature-icon"></i>
+                <p class="small text-uppercase mb-0 text-muted" style="font-size: 0.75rem;">Recyclable Packaging</p>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <i class="fa-solid fa-globe feature-icon"></i>
+                <p class="small text-uppercase mb-0 text-muted" style="font-size: 0.75rem;">Carbon Neutral</p>
+            </div>
+        </div>
+        <div class="mt-3">
+            <a href="#" class="btn btn-outline-custom">Read Our Story</a>
+        </div>
+    </section>
+
+    <!-- Hydrating Section with Ingredients -->
+    <section class="py-5 bg-light-tint">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/071/463/346/small/minimalist-skincare-product-set-on-marble-surface-beauty-routine-concept-photo.jpg" class="img-fluid rounded shadow-sm" alt="Hydrating Products">
+                </div>
+                <div class="col-lg-6 px-lg-5">
+                    <span class="text-muted small text-uppercase tracking-widest">Hydrating</span>
+                    <p class="text-muted small mt-3 lh-lg">Infused with bioactive native extracts of Lily Pilly and Desert Lime providing naturally occurring vitamin C and fortified with essential fatty acid rich Kangaroo Paw to rejuvenate and protect skin.</p>
+                    
+                    <div class="row mt-4 text-center text-sm-start">
+                        <div class="col-4">
+                            <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&q=80&w=200" class="ingredient-circle mb-2 shadow-sm" alt="Kangaroo Paw">
+                            <h6 class="small fw-bold text-uppercase" style="font-size: 0.7rem;">Kangaroo Paw</h6>
+                            <p class="text-muted" style="font-size: 0.7rem;">Rich in essential fatty acids and phytosterols to strengthen skin barrier.</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="https://images.unsplash.com/photo-1588964895597-cfccd6e2dbf9?auto=format&fit=crop&q=80&w=200" class="ingredient-circle mb-2 shadow-sm" alt="Desert Lime">
+                            <h6 class="small fw-bold text-uppercase" style="font-size: 0.7rem;">Desert Lime</h6>
+                            <p class="text-muted" style="font-size: 0.7rem;">Rich in vitamin C and antioxidants to protect and repair.</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=200" class="ingredient-circle mb-2 shadow-sm" alt="Lily Pilly">
+                            <h6 class="small fw-bold text-uppercase" style="font-size: 0.7rem;">Lily Pilly</h6>
+                            <p class="text-muted" style="font-size: 0.7rem;">Rich in vitamin C and fruit acids to rejuvenate.</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#" class="btn btn-outline-custom">Shop The Range</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scientific Results Section -->
+    <section class="py-5 text-center container">
+        <h3 class="section-title mb-5">Natural skincare with scientifically proven results.</h3>
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <i class="fa-solid fa-ban feature-icon"></i>
+                <h6 class="text-uppercase fw-bold small">No Nasties</h6>
+                <p class="text-muted small px-2">NO PEGS, Synthetic Fragrances, Animal Derivatives, Harsh Detergents, Propylene...</p>
+            </div>
+            <div class="col-md-3 mb-4">
+                <i class="fa-solid fa-award feature-icon"></i>
+                <h6 class="text-uppercase fw-bold small">Clinical Trials</h6>
+                <p class="text-muted small px-2">Our natural skincare has been mindfully & clinically trialed, delivering ensuring results...</p>
+            </div>
+            <div class="col-md-3 mb-4">
+                <i class="fa-solid fa-flask feature-icon"></i>
+                <h6 class="text-uppercase fw-bold small">Advanced Australian Formula</h6>
+                <p class="text-muted small px-2">These constituents are typically rich in vitamins and antioxidants which provide a...</p>
+            </div>
+            <div class="col-md-3 mb-4">
+                <i class="fa-solid fa-atom feature-icon"></i>
+                <h6 class="text-uppercase fw-bold small">Bioactive Constituents</h6>
+                <p class="text-muted small px-2">Our active extracts have learnt to adapt and thrive in the harsh Australian climate...</p>
+            </div>
+        </div>
+        <div class="mt-3">
+            <a href="#" class="btn btn-outline-custom">Read More</a>
+        </div>
+    </section>
+
+    <!-- (تم إعادة هندسة هذا الجزء بعناية): Detoxifying Section -->
+    <section class="py-5 bg-light-tint">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- صورة المنتجات على اليسار في هذا القسم لتطابق التصميم الأصلي -->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800" class="img-fluid rounded shadow-sm" alt="Detoxifying Products">
+                </div>
+                <!-- النصوص والمكونات الدائرية الثلاثة على اليمين -->
+                <div class="col-lg-6 px-lg-5">
+                    <span class="text-muted small text-uppercase tracking-widest">Detoxifying</span>
+                    <h2 class="h4 fw-light my-2">Purify & Refresh</h2>
+                    <p class="text-muted small mt-3 lh-lg">Featuring Bentonite and Australian Red and Pink Kaolin Clays as well as key Australian natives, high in antioxidants and vitamins to detox, brighten complexion and minimise the appearance of fine lines.</p>
+                    
+                    <div class="row mt-4 text-center text-sm-start">
+                        <div class="col-4">
+                            <img src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&q=80&w=200" class="ingredient-circle mb-2 shadow-sm" alt="Pink Clay">
+                            <h6 class="small fw-bold text-uppercase" style="font-size: 0.7rem;">Pink Clay</h6>
+                            <p class="text-muted" style="font-size: 0.7rem;">Gently detoxifies and refines skin.</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=200" class="ingredient-circle mb-2 shadow-sm" alt="Red Clay">
+                            <h6 class="small fw-bold text-uppercase" style="font-size: 0.7rem;">Red Clay</h6>
+                            <p class="text-muted" style="font-size: 0.7rem;">Revitalises dull and tired complexion.</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&q=80&w=200" class="ingredient-circle mb-2 shadow-sm" alt="Charcoal">
+                            <h6 class="small fw-bold text-uppercase" style="font-size: 0.7rem;">Charcoal</h6>
+                            <p class="text-muted" style="font-size: 0.7rem;">Provides a deep cleanse and acts as an antipollution masque.</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#" class="btn btn-outline-custom">Shop The Range</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- (تم تحسين وتنسيق هذا الجزء بعناية): Bottom Ranges Section -->
+    <section class="py-5 text-center container">
+        <p class="text-muted text-uppercase small tracking-widest lh-lg">Our range of skincare are rich in vitamins &<br>antioxidants which provide a powerhouse of goodness.</p>
+        
+        <div class="row mt-5 justify-content-center g-4">
+            <div class="col-md-4 range-card">
+                <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=400" class="rounded mb-3 shadow-sm" alt="Hydra Range">
+                <h6 class="text-uppercase fw-bold small tracking-widest mt-3">HYDRA +</h6>
+            </div>
+            <div class="col-md-4 range-card">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/071/463/346/small/minimalist-skincare-product-set-on-marble-surface-beauty-routine-concept-photo.jpg" class="rounded mb-3 shadow-sm" alt="Brightening Range">
+                <h6 class="text-uppercase fw-bold small tracking-widest mt-3">BRIGHTENING</h6>
+            </div>
+            <div class="col-md-4 range-card">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=400" class="rounded mb-3 shadow-sm" alt="Refine Range">
+                <h6 class="text-uppercase fw-bold small tracking-widest mt-3">REFINE</h6>
+            </div>
+        </div>
+        
+        <div class="mt-5">
+            <a href="#" class="btn btn-outline-custom">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-4 border-top text-center text-muted small">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Alkira Skincare. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

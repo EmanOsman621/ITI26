@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Game</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        margin: 200px;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+      .row span {
+        padding: 5px;
+        color: white;
+        border-radius: 5px;
+        margin-top: 22px;
+      }
+      .row .ip {
+        background-color: green;
+      }
+      .row .op {
+        background-color: blue;
+      }
+      .row input {
+        padding: 5px;
+        border-radius: 5px;
+        border: 2px solid;
+      }
+      .col #str,
+      .col #letter {
+        border-color: green;
+      }
+      .col #num {
+        border-color: blue;
+      }
+      .col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+      }
+      #searchBtn {
+        background-color: orangered;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        width: 100px;
+      }
+      button:hover {
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <span class="ip">Input</span>
+        <div class="col">
+          <label for="str">string</label>
+          <input
+            type="text"
+            name="string"
+            id="str"
+            value="This is javaScript"
+          />
+        </div>
+        <div class="col">
+          <label for="letter">letter</label>
+          <input
+            type="text"
+            name="string"
+            id="letter"
+            value="This is javaScript"
+          />
+        </div>
+      </div>
+      <div>
+        <button id="searchBtn">Search</button>
+      </div>
+      <div class="row">
+        <span class="op">Output</span>
+        <div class="col">
+          <label for="num">string</label>
+          <input type="text" name="num" id="num" value="" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let letter = document.getElementById("letter");
+      let str = document.getElementById("str");
+      let output = document.getElementById("num");
+      let search = document.getElementById("searchBtn");
+
+      function searchletter(str, letter) {
+        let arr = [];
+        for (let i = 0; i < str.length; i++) {
+          if (str[i] === letter) {
+            arr.push(i);
+          }
+        }
+        return arr;
+      }
+      search.addEventListener("click", function () {
+        if (letter.value == "") {
+          alert("Please enter a letter to search");
+        }
+        let result = searchletter(str.value, letter.value);
+        output.value = JSON.stringify(result);
+      });
+    </script>
+  </body>
+</html>

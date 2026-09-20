@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercise 1.2</title>
+  </head>
+  <body>
+    <script>
+      let sum = 0;
+      while (true) {
+        let input = prompt("Enter Number to sum, enter zero to stop");
+        if (input === null) {
+          break;
+        }
+        if (input.trim() === "" || isNaN(input)) {
+          alert("Error! Enter Correct message.");
+          continue;
+        }
+        let num = parseFloat(input);
+        sum += num;
+
+        if (sum > 100) {
+          alert("The sumition up over 100");
+          break;
+        }
+      }
+      alert(`The Sum: ${sum}`);
+      document.write(`<h3> ${sum} </h3>`);
+    </script>
+  </body>
+</html>

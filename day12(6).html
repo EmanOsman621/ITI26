@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let raduis = prompt("What is the value of your circles raduis");
+      if (raduis !== null && raduis !== "") {
+        let area = Math.PI * Math.pow(Number(raduis), 2);
+        alert(`Total area = ${area}`);
+      }
+
+      let value = prompt(
+        "What is the value you want to calculate its square root",
+      );
+      if (value !== null && value !== "") {
+        var sqrtResult = Math.sqrt(Number(value));
+        alert("squar root of " + value + " is " + sqrtResult);
+      }
+
+      var angle = prompt(
+        "What is the angle you want to calculate its cos value",
+      );
+      if (angle !== null && angle !== "") {
+        var radians = (Number(angle) * Math.PI) / 180;
+        var cosResult = Math.cos(radians).toFixed(4);
+        document.write("cos " + angle + "° is " + cosResult);
+      }
+    </script>
+  </body>
+</html>

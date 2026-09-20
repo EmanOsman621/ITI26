@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sorting</title>
+  </head>
+  <body>
+    <script>
+      let input = prompt("Enter 5 numerical value");
+      let arr = input.split(" ").map(Number);
+
+      let result = "";
+      for (let i = 0; i < arr.length; i++) {
+        result = result + " " + arr[i];
+      }
+      document.write(`u've entered the values of>> ${result} </br>`);
+
+      //ِAscending
+      function sort(arr2) {
+        return `u're values after being sorted ascending>> ${arr2.sort((a, b) => a - b)}</br>`;
+      }
+      document.write(sort(arr));
+
+      //   Descending
+      function des(arr2) {
+       arr2.sort((a,b) => a - b);
+       arr2.reverse();
+          return `u're values after being sorted descending>> ${arr2} </br>`;
+        
+      }
+       document.write(des(arr));
+    </script>
+  </body>
+</html>

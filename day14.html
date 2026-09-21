@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day14.1</title>
+    <style>
+      .container {
+        background-color: #ddd;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+      input {
+        padding: 5px;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        margin: 5px;
+        width: 50%;
+      }
+      input[type="submit"] {
+        background-color: cornflowerblue;
+        color: white;
+        cursor: pointer;
+      }
+      table {
+        margin-top: 20px;
+        width: 50%;
+        background-color: cornflowerblue;
+        color: white;
+        border: none;
+        text-align: center;
+        padding: 5px 10px;
+        border-spacing: 2px;
+      }
+      th,
+      td {
+        padding: 5px;
+      }
+      thead,
+      th,
+      tr {
+        border: 2px solid white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="#">
+        <input type="text" id="name" placeholder="Enter Your Name" required />
+        <input type="text" id="job" placeholder="Enter Your Job" required />
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter Your E-mail"
+          required
+        />
+        <input type="number" id="age" placeholder="Enter Your Age" required />
+        <input type="submit" id="btn" value="Add Data" />
+      </form>
+      <table border="1">
+        <thead>
+          <tr>
+            <th id="id">ID</th>
+            <th id="Name">Name</th>
+            <th id="Job">Job Title</th>
+            <th id="e-mail">E-mail</th>
+            <th id="Age">Age</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+    <script>
+      let i = 1;
+
+      let table = document.querySelector("table");
+      let form = document.querySelector("form");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (
+          document.getElementById("name").value === "" ||
+          document.getElementById("job").value === "" ||
+          document.getElementById("email").value === "" ||
+          document.getElementById("age").value === ""
+        ) {
+          alert("Please Full All Faild");
+          return;
+        }
+
+        let row = document.createElement("tr");
+
+        let id = document.createElement("td");
+        id.textContent = i;
+
+        let name = document.createElement("td");
+        name.textContent = document.getElementById("name").value;
+
+        let job = document.createElement("td");
+        job.textContent = document.getElementById("job").value;
+
+        let mail = document.createElement("td");
+        mail.textContent = document.getElementById("email").value;
+
+        let age = document.createElement("td");
+        age.textContent = document.getElementById("age").value;
+
+        row.append(id);
+        row.append(name);
+        row.append(job);
+        row.append(mail);
+        row.append(age);
+
+        table.append(row);
+        i++;
+      });
+    </script>
+  </body>
+</html>

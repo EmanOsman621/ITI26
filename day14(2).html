@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Show Game</title>
+    <style>
+        body {
+            background-color: #000000;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .images {
+            display: flex;
+            justify-content: center;
+        }
+        .images img {
+            border: 3px solid whitesmoke;
+            width: 30%;
+        }
+        .btn {
+            margin: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 30%;
+        }
+        button {
+            padding: 7px 10px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 20%;
+        }
+        .btn #right,
+        .btn #left {
+            background-color: orange;
+        }
+        .btn #play {
+            background-color: green;
+        }
+        .btn #stop {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+     <div class="images">
+        <img src="./image/image/IMG-20250423-WA0207.jpg" id="image" alt="">
+    </div>
+    <div class="btn">
+        <button id="left">&lt;</button>
+        <button id="play">play</button>
+        <button id="stop">Stop</button>
+        <button id="right">&gt;</button>
+    </div>
+   </div>
+
+   <script>
+    let play =document.getElementById("play");
+    let stop =document.getElementById("stop");
+    let right =document.getElementById("right");
+    let left =document.getElementById("left");
+    let image = document.getElementById("image");
+    let images = [
+        "./image/image/IMG-20250423-WA0206.jpg",
+        "./image/image/IMG-20250423-WA0135.jpg",
+        "./image/image/IMG-20250423-WA0130.jpg",
+        "./image/image/IMG-20250423-WA0131.jpg",
+        "./image/image/IMG-20250423-WA0136.jpg",
+        "./image/image/IMG-20250423-WA0138.jpg",
+        "./image/image/IMG-20250423-WA0139.jpg",
+        "./image/image/IMG-20250423-WA0186.jpg",
+        "./image/image/IMG-20250423-WA0198.jpg",
+        "./image/image/IMG-20250423-WA0163.jpg",
+        "./image/image/IMG-20250423-WA0153.jpg",
+        "./image/image/IMG-20250423-WA0150.jpg"
+        
+    ];
+
+    // to play photo
+    let i = 0, interval;
+    play.addEventListener("click", function() {
+           interval =  setInterval(() => {
+                image.src = images[i];
+                i++;
+
+                if(i === images.length) {
+                    i = 0;
+                }
+            }, 500);
+        }
+    )
+
+    // to stop loop
+    stop.addEventListener("click", function() {
+        clearInterval(interval);
+    })
+
+    right.addEventListener("click", function() {
+        i++;
+        if(i === images.length) {
+            i = 0;
+        }
+        image.src = images[i];
+    });
+
+    left.addEventListener("click", function() {
+        i--;
+        if(i < 0) {
+            i = images.length - 1;
+        }
+        image.src = images[i];
+    });
+
+   </script>
+</body>
+</html>

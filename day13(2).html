@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count Me Game</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        margin: 200px;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+      .row span {
+        padding: 5px;
+        color: white;
+        border-radius: 5px;
+        margin-top: 22px;
+      }
+      .row .ip {
+        background-color: green;
+      }
+      .row .op {
+        background-color: blue;
+      }
+      .row input {
+        padding: 5px;
+        border-radius: 5px;
+        border: 2px solid;
+      }
+      .col #str,
+      .col #obj {
+        border-color: green;
+        text-align: center;
+    }
+    .col #str {
+        width: 50px;
+    }
+    .col #obj,
+    .col #num  {
+          width: 300px;
+          text-align: center;
+        }
+        .col #num {
+            border-color: blue;
+      }
+      .col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+      }
+      #searchBtn {
+        background-color: orangered;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        width: 100px;
+      }
+      button:hover {
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container myclass">
+      <div class="row myclass">
+        <span class="ip myclass">Input</span>
+        <div class="col myclass">
+          <label for="str">Tag Name</label>
+          <input
+            type="text"
+            name="string"
+            id="str"
+            value='"div"'
+          />
+        </div>
+        <div class="col myclass">
+          <label for="obj">Object</label>
+          <input
+            type="text"
+            name="string"
+            id="obj"
+            value="Class: 'my-class', Name: 'my-name'"
+          />
+        </div>
+      </div>
+      <div>
+        <button id="searchBtn">Search</button>
+      </div>
+      <div class="row myclass">
+        <span class="op myclass">Output</span>
+        <div class="col myclass">
+          <label for="num">Object</label>
+          <input type="text" name="num" id="num" value="{all: 7, Class: 3, Id: true, Name: 2}" />
+        </div>
+      </div>
+    </div>
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script>
+     let all = document.querySelectorAll("div");
+     let name = document.querySelectorAll("input[name]");
+     let myclass = document.querySelectorAll(".myclass");
+     let output = document.getElementById("num");
+     let input = document.getElementById("str");
+
+        document.getElementById("searchBtn").addEventListener("click", function() {
+            output.value = `{all ${all.length}, class: ${myclass.length}, Name: ${name.length}}`;
+        })
+      
+    </script>
+  </body>
+</html>

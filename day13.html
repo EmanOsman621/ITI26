@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 13</title>
+    <style>
+      div {
+        background-color: #ddd;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 15px;
+      }
+      .top span {
+        background-color: #eee;
+        display: block;
+        padding: 10px;
+        border-radius: 5px;
+        color: #5f5f5fb0;
+        font-weight: bold;
+      }
+      .top p {
+        color: #5f5f5fa7;
+      }
+      .multi {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .multi .row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .multi input {
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+        font-size: 12px;
+        text-align: center;
+      }
+      .multi label {
+        font-size: 14px;
+      }
+      .multi .bottom {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: calc(50% - 120px);
+        margin-top: 0;
+      }
+      .links {
+        display: flex;
+        justify-content: space-around;
+      }
+      .links a {
+        text-decoration: none;
+      }
+      .btn {
+        padding: 15px;
+        display: flex;
+        justify-content: space-around;
+      }
+      .btn button {
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: #5f5f5fb0;
+        cursor: pointer;
+      }
+      .btn button:hover {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <span id="span">Span 1</span>
+      <p id="pra">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quis,
+        aliquam deleniti autem optio ducimus labore animi! Soluta voluptate,
+        quia iusto eos magni, voluptatum velit atque impedit temporibus debitis
+        porro?
+      </p>
+    </div>
+    <div class="multi">
+      <div class="row">
+        <label for="num1">Number1</label>
+        <input type="text" id="num1" placeholder="Enter Number one..." />
+      </div>
+      <div class="row">
+        <label for="num2">Number2</label>
+        <input type="text" id="num2" placeholder="Enter Number Two..." />
+      </div>
+      <div class="bottom">
+        <label for="result">Result</label>
+        <input type="text" id="result" placeholder="Result..." />
+      </div>
+    </div>
+
+    <div class="links">
+      <a href="https://www.google.com/" id="google-link">Google</a>
+      <a href="https://www.linkedin.com" id="linkedin-link">Linkedin</a>
+    </div>
+
+    <div class="btn">
+      <button class="changeHtml">Change Html</button>
+      <button class="changeText">Change Text</button>
+      <button class="changeContent">Change Content</button>
+      <button class="multiply">Multiply</button>
+      <button class="changeStyle">Change Style</button>
+      <button class="swap">Swap</button>
+    </div>
+    <script>
+      document
+        .getElementsByClassName("changeHtml")[0]
+        .addEventListener("click", function () {
+          document.getElementById("span").innerHTML =
+            "<h3> New html element </h3>";
+        });
+      document
+        .getElementsByClassName("changeText")[0]
+        .addEventListener("click", function () {
+          document.getElementById("pra").textContent = "New pragragh";
+        });
+      document.getElementsByClassName("changeContent")[0].addEventListener("click", function () {
+        document.getElementById("span").textContent = "New Text Only";
+      });
+      document
+        .getElementsByClassName("multiply")[0]
+        .addEventListener("click", function () {
+          let multi =
+            document.getElementsByTagName("input")[0].value *
+            document.getElementsByTagName("input")[1].value;
+          document.getElementsByTagName("input")[2].value = Number(multi);
+        });
+      document
+        .getElementsByClassName("changeStyle")[0]
+        .addEventListener("click", function () {
+          document.getElementById("span").style.cssText =
+            `background-color: red; color: white;`;
+        });
+      document
+        .getElementsByClassName("swap")[0]
+        .addEventListener("click", function () {
+          let google = document.getElementById("google-link");
+          let linkedin = document.getElementById("linkedin-link");
+          let temp = google.href;
+          google.href = linkedin.href;
+          linkedin = temp;
+        });
+    </script>
+  </body>
+</html>

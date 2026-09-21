@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alert</title>
+    <link
+      rel="stylesheet"
+      href="../fontawesome-free-6.7.2-web/css/all.min.css"
+    />
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .top {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        #succ ,
+        #error {
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #succ {
+            background-color: green;
+        }
+        #error {
+            background-color: red;
+        }
+         #succ:hover ,
+        #error:hover {
+            opacity: 0.88;
+        } 
+        #bottom {
+            background-color: #eee;
+            padding: 10px 20px;
+            text-align: center;
+            width: 350px;
+            font: bold 20px normal;
+            display: none;
+        }
+        #bottom #icon {
+            font-size: 50px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <button id="succ">
+          <i class="fa-regular fa-circle-check"></i> Success Alert
+        </button>
+        <button id="error">
+          <i class="fa-regular fa-circle-xmark"></i> Error Alert
+        </button>
+      </div>
+
+      <div id="bottom">
+        <h3 id="title">title</h3>
+        <div id="icon">icon</div>
+        <p id="message">message</p>
+      </div>
+    </div>
+
+    <script>
+        document.getElementById("succ").addEventListener("click", function() {
+            document.getElementById("bottom").style.cssText = `
+            display: block;
+            color: green;
+            `
+            document.getElementById("title").innerText = "Success";
+            document.getElementById("icon").innerHTML = '<i class="fa-regular fa-circle-check"></i>';
+            document.getElementById("message").innerText = "This is an Success Message";
+        })
+        document.getElementById("error").addEventListener("click", function() {
+            document.getElementById("bottom").style.cssText = `
+            display: block;
+            color: red;
+            `
+            document.getElementById("title").innerText = "Error";
+            document.getElementById("icon").innerHTML = '<i class="fa-regular fa-circle-xmark"></i>';
+            document.getElementById("message").innerText = "This is an Error Message";
+        })
+    </script>
+  </body>
+</html>

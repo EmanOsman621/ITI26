@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day15.2</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+      }
+      form {
+        text-align: center;
+      }
+      .row {
+        margin-bottom: 15px;
+      }
+      label {
+        display: inline-block;
+        width: 100px;
+      }
+      input[type="text"],
+      input[type="password"],
+      input[type="email"],
+      select {
+        width: 300px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+      }
+      .btn {
+        text-align: right;
+        margin-top: 25px;
+      }
+      .btn input {
+        padding: 8px 15px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      #submit {
+        background-color: #00b359;
+      }
+      #reset {
+        background-color: #ff3333;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#" autocomplete="on">
+      <div class="row">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter Your Name" required />
+      </div>
+      <div class="row">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required />
+      </div>
+      <div class="row">
+        <label for="pass">Password</label>
+        <input type="password" name="pass" id="pass" />
+      </div>
+      <div class="row">
+        <label for="gender">Gender</label>
+
+        <input type="radio" name="gender" id="femaleRadio" value="female" />
+        <label for="femaleRadio">Female</label>
+
+        <input type="radio" name="gender" id="maleRadio" value="male" />
+        <label for="maleRadio">Male</label>
+      </div>
+      <div class="row">
+        <label>Sports</label>
+        <input type="checkbox" name="sports" id="sport1" /> 
+        <label for="sport1">Tennis</label>
+
+        <input type="checkbox" name="sports" id="sport2" /> 
+        <label for="sport2">Running</label>
+
+        <input type="checkbox" name="sports" id="sport3" /> 
+        <label for="sport3">Football</label>
+      </div>
+      <div class="row">
+        <label for="country">Country</label>
+        <select name="country" id="country">
+          <option value="">-- Select Country --</option>
+          <option value="eyp" name="country">Egypt</option>
+          <option value="Plas" name="country">Plastine</option>
+          <option value="ksa" name="country">KSA</option>
+        </select>
+      </div>
+      <div class="btn">
+        <input type="submit" value="Sumbit" id="submit" />
+        <input type="reset" value="Reset" id="reset" />
+      </div>
+    </form>
+    <div id="errorBox" class="error"></div>
+
+    <script>
+      document.querySelector("form").addEventListener("submit", function () {
+        event.preventDefault();
+
+        let errors = [];
+
+        let name = document.getElementById("name").value.trim();
+        if (name === "") {
+          errors.push("Name is required. ");
+        }
+
+        let mail = document.getElementById("email").value.trim();
+        let mailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (!mail.match(mailPattern)) {
+          errors.push("Email is not valid");
+        }
+
+        let pass = document.getElementById("pass").value;
+        if (pass.length < 8) {
+          errors.push("Password must be 8 chars at least");
+        }
+
+        let gender = document.querySelector('input[name="gender"]:checked');
+        if (!gender) {
+          errors.push("Please select your gender.");
+        }
+
+        let sports = document.querySelectorAll(
+          'input[name = "sports"]:checked',
+        );
+        if (sports.length < 2) {
+          errors.push("Please select at least two sports.");
+        }
+
+        let country = document.getElementById("country").value;
+        if (country === "") {
+          errors.push("Please select your country.");
+        }
+
+        let errorBox = document.getElementById("errorBox");
+        if (errors.length > 0) {
+          errorBox.innerHTML = errors.join("<br>");
+          errorBox.style.display = "block";
+        } else {
+          errorBox.style.display = "none";
+          alert("Form submitted successfully!");
+          // this.submit(); // لو حابب تبعث البيانات للسيفر فعلياً
+        }
+      });
+    </script>
+  </body>
+</html>

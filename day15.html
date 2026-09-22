@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 15</title>
+</head>
+<body>
+    
+    <script>
+        // task one
+        document.addEventListener("keydown", function() {
+            let keyCode = event.keyCode || envent.which;
+
+            let message = `ASCII Code: ${keyCode}\n`;
+            message += `Alt pressed: ${event.altKey}\n`;
+            message += `Ctrl pressed: ${event.ctrlKey}\n`;
+            message += `Shift pressed: ${event.shiftKey}\n`;
+
+            alert(message);
+        });
+
+        // task 2
+        document.addEventListener("contextmenu", function() {
+            event.preventDefault();
+        })
+    </script>
+</body>
+</html>
